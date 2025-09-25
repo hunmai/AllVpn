@@ -3,108 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureVPN</title>
+    <title>J&K BROTHERS - Free VPN for Thailand</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, #1a2a6c, #2a3a7c);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
         }
         
-        /* Header and Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            z-index: 1000;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: flex-end;
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
         }
         
-        .menu-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
+        header {
+            background-color: #1a73e8;
             color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .menu-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        
-        .dropdown-menu {
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            background: rgba(30, 40, 100, 0.9);
-            border-radius: 8px;
-            padding: 10px 0;
-            min-width: 200px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            display: none;
-            z-index: 1001;
-        }
-        
-        .dropdown-menu.active {
-            display: block;
-        }
-        
-        .dropdown-menu a {
-            display: block;
-            padding: 12px 20px;
-            color: white;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        
-        .dropdown-menu a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Main Content */
-        .container {
-            max-width: 500px;
-            width: 100%;
+            padding: 15px 0;
             text-align: center;
-            margin-top: 80px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            position: relative;
         }
         
         .logo {
             width: 70px;
             height: 70px;
-            margin: 0 auto 20px;
-            border-radius: 15px;
+            margin: 0 auto 10px;
+            background-color: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            color: #1a73e8;
+            font-size: 24px;
             overflow: hidden;
         }
         
@@ -115,146 +57,268 @@
         }
         
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            background: linear-gradient(to right, #4CAF50, #2196F3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 28px;
+            margin-bottom: 5px;
         }
         
-        .tagline {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+        .subtitle {
+            font-size: 18px;
             opacity: 0.9;
-            line-height: 1.5;
+        }
+        
+        .apk-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .apk-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .apk-logo {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1a73e8;
+            font-size: 18px;
+            overflow: hidden;
+        }
+        
+        .apk-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .apk-name {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1a73e8;
         }
         
         .download-btn {
             display: inline-flex;
             align-items: center;
-            background: #4285F4;
+            background-color: #1a73e8;
             color: white;
             padding: 12px 25px;
-            border-radius: 8px;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(66, 133, 244, 0.3);
+            transition: background-color 0.3s;
         }
         
         .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(66, 133, 244, 0.4);
+            background-color: #0d5bb9;
         }
         
-        .playstore-icon {
-            width: 24px;
-            height: 24px;
+        .download-btn img {
+            width: 50px;
+            height: 50px;
+            margin-right: 12px;
+        }
+        
+        /* New Menu Styles */
+        .menu-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            width: 250px;
+            z-index: 1000;
+            display: none;
+            overflow: hidden;
+        }
+        
+        .dropdown-menu.active {
+            display: block;
+        }
+        
+        .dropdown-menu .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.3s;
+        }
+        
+        .dropdown-menu .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-menu .menu-item:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .dropdown-menu .menu-item i {
             margin-right: 10px;
+            font-size: 20px;
+            color: #1a73e8;
+            width: 20px;
+            text-align: center;
         }
         
         footer {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            opacity: 0.7;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
         }
         
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .tagline {
-                font-size: 1rem;
-            }
-            
+        /* Responsive design */
+        @media (max-width: 768px) {
             .dropdown-menu {
+                width: 200px;
                 right: 10px;
-                min-width: 180px;
+            }
+            
+            .download-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .download-btn img {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <button class="menu-btn" id="menuBtn">
-                Menu
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M7 10l5 5 5-5z"/>
-                </svg>
+    <div class="container">
+        <header>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
             </button>
-            <div class="dropdown-menu" id="dropdownMenu">
-                <a href="https://all-vpn-app.netlify.app/about.html">About VPN</a>
-                <a href="https://jkapp.site/package">User Online</a>
-                <a href="https://all-vpn-app.netlify.app/package.html">Package ဝယ်နည်းများ</a>
+            <div class="logo">
+                <img src="https://my-app-icon.netlify.app/vpn-icon.png" alt="J&K Brothers">
             </div>
-        </div>
-    </header>
-    
-    <div class="container">
-        <div class="logo">
-            <img src="https://my-app-icon.netlify.app/icon_pukang.png" alt="VPN Logo">
-        </div>
-        <h1>PUKANG VPN</h1>
-        <a href="https://play.google.com/store/apps/details?id=com.pukangvpn.th" class="download-btn">
-            <img src="https://raw.githubusercontent.com/kindvpn/JK/main/logo/playstore.png" class="playstore-icon" alt="Google Play">
-            Download on Google Play
-        </a>
-    </div>
-    
-    <div class="container">
-        <div class="logo">
-            <img src="https://my-app-icon.netlify.app/icon_kham.png" alt="VPN Logo">
-        </div>
-        <h1>KHAM VPN</h1>
-        <a href="https://play.google.com/store/apps/details?id=com.khamvpn.net" class="download-btn">
-            <img src="https://raw.githubusercontent.com/kindvpn/JK/main/logo/playstore.png" class="playstore-icon" alt="Google Play">
-            Download on Google Play
-        </a>
-    </div>
-    
-    <div class="container">
-        <div class="logo">
-            <img src="https://my-app-icon.netlify.app/icon_shan.png" alt="VPN Logo">
-        </div>
-        <h1>SHAN VPN</h1>
-        <a href="https://play.google.com/store/apps/details?id=com.shanvpn.vpnth" class="download-btn">
-            <img src="https://raw.githubusercontent.com/kindvpn/JK/main/logo/playstore.png" class="playstore-icon" alt="Google Play">
-            Download on Google Play
-        </a>
-    </div>
-    
-    <div class="container">
-        <div class="logo">
-            <img src="https://my-app-icon.netlify.app/icon_kakhanga.png" alt="VPN Logo">
-        </div>
-        <h1>KaKhaNga VPN</h1>
-        <a href="https://play.google.com/store/apps/details?id=com.kakhangavpn.net" class="download-btn">
-            <img src="https://raw.githubusercontent.com/kindvpn/JK/main/logo/playstore.png" class="playstore-icon" alt="Google Play">
-            Download on Google Play
-        </a>
-    </div>
-    
-    
-    <footer>
-            <p>© 2025 VPN. All rights reserved.</p>
+            <p class="subtitle">Free VPN For Thailand</p>
+            
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="http://status.kindvpn.site:81/" class="menu-item">
+                    <i class="fas fa-users"></i>
+                    <span>Online Users List</span>
+                </a>
+                <a href="https://all-vpn-app.netlify.app/about" class="menu-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About VPN</span>
+                </a>
+                <a href="https://use-vpn.netlify.app/" class="menu-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>How to use</span>
+                </a>
+                <a href="https://simpackage.netlify.app/" class="menu-item">
+                    <i class="fas fa-sim-card"></i>
+                    <span>SIM & PACKAGE</span>
+                </a>
+            </div>
+        </header>
+        
+        <section class="apk-section">
+            <div class="apk-card">
+                <div class="apk-logo">
+                    <img src="https://my-app-icon.netlify.app/icon_pukang.png" alt="PUKANG VPN">
+                </div>
+                <h2 class="apk-name">PUKANG VPN</h2>
+                <a href="https://play.google.com/store/apps/details?id=com.pukangvpn.th" class="download-btn">
+                    <img src="https://my-app-icon.netlify.app/googleplay.png" alt="Play Store"> Download on PlayStore
+                </a>
+            </div>
+            
+            <div class="apk-card">
+                <div class="apk-logo">
+                    <img src="https://my-app-icon.netlify.app/icon_kham.png" alt="KHAM VPN">
+                </div>
+                <h2 class="apk-name">KHAM VPN</h2>
+                <a href="https://play.google.com/store/apps/details?id=com.khamvpn.net" class="download-btn" class="download-btn">
+                    <img src="https://my-app-icon.netlify.app/googleplay.png" alt="Play Store"> Download on PlayStore
+                </a>
+            </div>
+            
+            <div class="apk-card">
+                <div class="apk-logo">
+                    <img src="https://my-app-icon.netlify.app/icon_shan.png" alt="SHAN VPN">
+                </div>
+                <h2 class="apk-name">SHAN VPN</h2>
+                <a href="https://play.google.com/store/apps/details?id=com.shanvpn.vpnth" class="download-btn">
+                    <img src="https://my-app-icon.netlify.app/googleplay.png" alt="Play Store"> Download on PlayStore
+                </a>
+            </div>
+            
+            <div class="apk-card">
+                <div class="apk-logo">
+                    <img src="https://my-app-icon.netlify.app/icon_kakhanga.png" alt="KaKhaNga VPN">
+                </div>
+                <h2 class="apk-name">KaKhaNga VPN</h2>
+                <a href="https://play.google.com/store/apps/details?id=com.kakhangavpn.net" class="download-btn" class="download-btn">
+                    <img src="https://my-app-icon.netlify.app/googleplay.png" alt="Play Store"> Download on PlayStore
+                </a>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2023 - Free VPN for Thailand. All rights reserved.</p>
         </footer>
+    </div>
 
     <script>
         // Toggle dropdown menu
-        document.getElementById('menuBtn').addEventListener('click', function() {
-            document.getElementById('dropdownMenu').classList.toggle('active');
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        menuToggle.addEventListener('click', function() {
+            dropdownMenu.classList.toggle('active');
         });
         
         // Close dropdown when clicking outside
         document.addEventListener('click', function(event) {
-            const menuBtn = document.getElementById('menuBtn');
-            const dropdownMenu = document.getElementById('dropdownMenu');
-            
-            if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
                 dropdownMenu.classList.remove('active');
             }
+        });
+        
+        // Handle menu item clicks
+        document.querySelectorAll('.dropdown-menu .menu-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Only prevent default for non-link items
+                if (this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    const menuText = this.querySelector('span').textContent;
+                    alert(`You clicked on: ${menuText}`);
+                    dropdownMenu.classList.remove('active');
+                }
+            });
         });
     </script>
 </body>
