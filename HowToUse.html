@@ -1,434 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Make by KBANK</title>
+    <title>VPN အသုံးပြုနည်း လမ်းညွှန်</title>
     <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
         body {
-            background-color: #f8f9fa;
-            color: #333;
+            font-family: 'Pyidaungsu', 'Myanmar3', sans-serif;
             line-height: 1.6;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
             color: #333;
-            font-weight: 700;
-            font-size: 1.5rem;
         }
-        
-        .logo-icon {
-            background-color: #e41e27;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #e41e27;
-        }
-        
-        /* Main Content Styles */
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .page-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-        }
-        
-        .page-header h1 {
-            font-size: 2.5rem;
-            color: #222;
-            margin-bottom: 1rem;
-        }
-        
-        .page-header p {
-            color: #666;
             max-width: 800px;
             margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        
-        .content-section {
-            background-color: #fff;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-        
-        .content-section h2 {
-            color: #e41e27;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 0.5rem;
-        }
-        
-        .content-section h3 {
-            color: #333;
-            margin: 1.5rem 0 1rem;
-            font-size: 1.3rem;
-        }
-        
-        .content-section p {
-            margin-bottom: 1rem;
-            color: #555;
-        }
-        
-        .content-section ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .content-section li {
-            margin-bottom: 0.5rem;
-            color: #555;
-        }
-        
-        .highlight-box {
-            background-color: #f9f9f9;
-            border-left: 4px solid #e41e27;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        /* Footer Styles */
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 3rem 0 1.5rem;
-            margin-top: 3rem;
-        }
-        
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-section h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: #fff;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-section a:hover {
-            color: #fff;
-        }
-        
-        .copyright {
+        h1 {
+            color: #2c3e50;
             text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid #444;
-            color: #aaa;
-            font-size: 0.9rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
         }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            nav ul {
-                gap: 1rem;
-            }
-            
-            .content-section {
-                padding: 1.5rem;
-            }
-            
-            .page-header h1 {
-                font-size: 2rem;
-            }
+        ol {
+            padding-left: 20px;
         }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .content-section {
-                padding: 1rem;
-            }
-            
-            .page-header {
-                padding: 1rem 0;
-            }
+        li {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .note {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .gratitude {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-style: italic;
+            text-align: center;
+        }
+        .important {
+            color: #e74c3c;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-container">
-            <a href="#" class="logo">
-                <div class="logo-icon">M</div>
-                <span>Make by KBANK</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Solutions</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container">
-        <div class="page-header">
-            <h1>Privacy Policy</h1>
-            <p>Last updated: September 25, 2023</p>
-        </div>
+    <div class="container">
+        <h1>VPN အသုံးပြုနည်း လမ်းညွှန်</h1>
         
-        <div class="content-section">
-            <h2>Introduction</h2>
-            <p>Welcome to Make by KBANK. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.</p>
-            
-            <div class="highlight-box">
-                <p>By accessing or using Make by KBANK's services, you agree to the terms of this Privacy Policy. If you do not agree with our policies and practices, please do not use our services.</p>
-            </div>
-            
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
-        </div>
+        <ol>
+            <li>VPN ဒေါင်းပြီး၀င်ရင် Allowed ပေးပါ အင်တာနက်ခဏလိုမယ်။</li>
+            <li>စစချင်းမှာအချိန် 5 မိနစ်စာပေးထားပါတယ်။</li>
+            <li>ပထမဦးဆုံး VPN ချိတ်ပါ 5 မိနစ်မကုန်ခင် အချိန်နာရီများကြီးတိုးထားကြပါ။</li>
+            <li>အချိန်ကတစ်ခါတိုး 12 နာရီရမှာဖြစ်ပါတယ်နာရီပေါင်းရာချီတိုးထားလို့ရပါတယ်ဗျ။</li>
+            <li class="important">အချိန်ကိုသတိထားပါ အချိန်ကုန်ရင် VPN ကချိတ်မရပါဘူး။</li>
+            <li>တချို့ဖုန်းတွေမှာ VPN ချိတ်ပြီး အချိန်တိုးမရရင်ဖိုင်ပြောင်းတာဖြစ်ဖြစ်လုပ်ကြည့်ပါ မရသေးပါက ဖုန်း Setting ထဲမှာ Reset All Settings လုပ်ကြည့်ပါ။</li>
+            <li>VPN ကချိတ်ဆက်လဲရတယ် ဒါပေမယ့်အင်တာနက်သုံးမရဘူးဖြစ်နေရင်တချို့ဖုန်းတွေမှာ VPN ထဲက Setting ထဲ၀င်ပါ DNS Forwarder နဲ့ UDP Forwarder အမှန်ခြစ်နှစ်ခုကို ဖြုတ်လိုက်ပါ ပြီးရင်ပြန်ချိတ်သုံးကြည့်ပါ။</li>
+        </ol>
         
-        <div class="content-section">
-            <h2>Information We Collect</h2>
-            <p>We collect several types of information from and about users of our services, including:</p>
-            
-            <h3>Personal Information</h3>
-            <p>When you register for an account or use our services, we may collect personal information such as:</p>
-            <ul>
-                <li>Name and contact information (email address, phone number)</li>
-                <li>Demographic information (age, gender, location)</li>
-                <li>Financial information necessary for providing our services</li>
-                <li>Identification documents as required by regulations</li>
-            </ul>
-            
-            <h3>Technical Information</h3>
-            <p>We automatically collect certain information when you visit our website or use our services:</p>
-            <ul>
-                <li>IP address and device information</li>
-                <li>Browser type and version</li>
-                <li>Pages you visit and time spent on our services</li>
-                <li>Cookies and similar tracking technologies</li>
-            </ul>
+        <div class="gratitude">
+            <h2>ကျေးဇူးတင်လွှာ</h2>
+            <p>ကျွန်တော်တို့ VPN ကိုအသုံးပြုပေးကြတဲ့ ညီအကိုမောင်နှမများ ဦးဦးဒေါ်ဒေါ် ညီ ညီမလေးများအားလုံးကို ကျွန်တော်တို့ အထူးပင်ကျေးဇူးတင်ရှိပါကြောင်းနှင့် အလုပ်အကိုင်များအဆင်ပြေပြီး စီးပွါးဉစ္စာများ ဆထက်တပိုး တိုးပွါးနိုင်ကြပါစေလို့ ဆုတောင်းပေးလိုက်ပါတယ်ခင်ဗျ။</p>
         </div>
-        
-        <div class="content-section">
-            <h2>How We Use Your Information</h2>
-            <p>We use the information we collect for various purposes, including:</p>
-            <ul>
-                <li>To provide, maintain, and improve our services</li>
-                <li>To process transactions and send related information</li>
-                <li>To communicate with you about updates, security alerts, and support messages</li>
-                <li>To personalize your experience and provide content and product recommendations</li>
-                <li>To detect, prevent, and address technical issues and fraudulent activities</li>
-                <li>To comply with legal obligations and regulatory requirements</li>
-            </ul>
-        </div>
-        
-        <div class="content-section">
-            <h2>Information Sharing and Disclosure</h2>
-            <p>We may share your information in the following circumstances:</p>
-            
-            <h3>With Your Consent</h3>
-            <p>We may share your information with third parties when you have given us explicit consent to do so.</p>
-            
-            <h3>Service Providers</h3>
-            <p>We may share information with third-party vendors, service providers, and partners who perform services on our behalf.</p>
-            
-            <h3>Legal Requirements</h3>
-            <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities.</p>
-            
-            <h3>Business Transfers</h3>
-            <p>In connection with any merger, sale of company assets, or acquisition, your information may be transferred to the new owners.</p>
-        </div>
-        
-        <div class="content-section">
-            <h2>Data Security</h2>
-            <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
-            
-            <p>Despite our efforts, no security measures are completely impermeable. We cannot guarantee the absolute security of your information transmitted to our services.</p>
-        </div>
-        
-        <div class="content-section">
-            <h2>Your Rights and Choices</h2>
-            <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
-            <ul>
-                <li>The right to access and receive a copy of your personal information</li>
-                <li>The right to rectify inaccurate or incomplete information</li>
-                <li>The right to request deletion of your personal information</li>
-                <li>The right to restrict or object to our processing of your information</li>
-                <li>The right to data portability</li>
-                <li>The right to withdraw consent at any time</li>
-            </ul>
-            
-            <p>To exercise these rights, please contact us using the information provided in the "Contact Us" section.</p>
-        </div>
-        
-        <div class="content-section">
-            <h2>Cookies and Tracking Technologies</h2>
-            <p>We use cookies and similar tracking technologies to track activity on our services and hold certain information.</p>
-            
-            <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our services.</p>
-        </div>
-        
-        <div class="content-section">
-            <h2>International Data Transfers</h2>
-            <p>Your information may be transferred to and maintained on computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.</p>
-            
-            <p>We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy.</p>
-        </div>
-        
-        <div class="content-section">
-            <h2>Children's Privacy</h2>
-            <p>Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18.</p>
-            
-            <p>If we become aware that we have collected personal information from a child under 18 without verification of parental consent, we take steps to remove that information from our servers.</p>
-        </div>
-        
-        <div class="content-section">
-            <h2>Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
-            
-            <div class="highlight-box">
-                <p><strong>Make by KBANK</strong><br>
-                Email: privacy@makebykbank.com<br>
-                Address: 123 Financial District, Bangkok, Thailand</p>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Make by KBANK</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Newsroom</a></li>
-                        <li><a href="#">Investor Relations</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Products</h3>
-                    <ul>
-                        <li><a href="#">Digital Banking</a></li>
-                        <li><a href="#">Investment</a></li>
-                        <li><a href="#">Loans</a></li>
-                        <li><a href="#">Insurance</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Security Tips</a></li>
-                        <li><a href="#">System Status</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Compliance</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 Make by KBANK. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
